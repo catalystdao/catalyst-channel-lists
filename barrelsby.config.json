@@ -1,0 +1,7 @@
+{
+  "directory": ["./src"],
+  "exclude": ["__snapshots__", ".spec.ts"],
+  "delete": true,
+  "singleQuotes": true,
+  "location": "below"
+}

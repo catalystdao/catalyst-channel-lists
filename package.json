@@ -1,0 +1,36 @@
+{
+  "name": "@catalabs/catalyst-channel-lists",
+  "version": "0.0.2",
+  "description": "Catalyst AMM channel list utilities and definitions",
+  "keywords": [
+    "amm",
+    "catalyst",
+    "defi",
+    "channel",
+    "lists"
+  ],
+  "author": "Catalabs <hello@catalabs.org>",
+  "homepage": "https://github.com/catalystdao/catalyst-dao#readme",
+  "license": "UNLICENSED",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catalystdao/catalyst-dao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/catalystdao/catalyst-dao/issues"
+  },
+  "scripts": {
+    "barrels": "barrelsby --config barrelsby.config.json",
+    "build": "tsc -b",
+    "clean": "rm -rf ./build",
+    "format": "prettier -w src/*.ts",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
