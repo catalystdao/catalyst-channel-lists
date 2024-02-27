@@ -1,15 +1,14 @@
 {
-  "extends": "../config/tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
     "outDir": "build",
     "rootDir": "./src",
-    "tsBuildInfoFile": "./build/tsconfig.tsbuildinfo",
-    "moduleResolution": "node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noImplicitAny": false
   },
-  "include": [
-    "src",
-    "src/config/chains.json"
-  ]
+  "include": ["src"],
+  "exclude": ["src/precompiles"]
 }

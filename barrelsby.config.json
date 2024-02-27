@@ -1,6 +1,6 @@
 {
   "directory": ["./src"],
-  "exclude": ["__snapshots__", ".spec.ts"],
+  "exclude": ["__snapshots__", ".spec.ts", "src/precompiles"],
   "delete": true,
   "singleQuotes": true,
   "location": "below"

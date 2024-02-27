@@ -1,10 +1,8 @@
-import { getChannel, ChannelProvider } from '@catalabs/catalyst-channel-lists';
+import { getChannel } from '../src/utils/channels.utils';
 
 export function getChannelExample() {
-  const channelId = getChannel(ChannelProvider.Wormhole, '5001', '80001');
-  console.log(
-    `Wormhole channel from Mantle Testnet to Mumbai Testnet: ${channelId}`,
-  );
+  const channelId = getChannel('Polymer', '84532', '11155420');
+  console.log(`Polymer channel from 84532 to 11155420: ${channelId}`);
 }
 
 getChannelExample();
