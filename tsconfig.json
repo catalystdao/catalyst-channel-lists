@@ -7,8 +7,27 @@
     "outDir": "build",
     "rootDir": "./src",
     "resolveJsonModule": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "module": "commonjs",
+    "sourceMap": true,
+    "composite": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noLib": false,
+    "removeComments": true,
+    "jsx": "react",
+    "declaration": true,
+    "declarationMap": true,
+    "tsBuildInfoFile": "./build/tsconfig.tsbuildinfo"
   },
   "include": ["src"],
-  "exclude": ["src/precompiles"]
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "src/precompiles"]
 }

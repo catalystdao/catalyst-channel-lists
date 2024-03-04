@@ -6,4 +6,5 @@ export enum ArbitraryMessagingBridge {
   Mock = 'MOCK',
   Wormhole = 'Wormhole',
   Polymer = 'Polymer',
+  Default = 'default',
 }
