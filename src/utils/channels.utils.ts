@@ -20,9 +20,7 @@ export function getChannel(
     throw new Error(
       `${String(fromChain)} is not a supported origin chain for ${String(arbitraryMessagingBridge)}`,
     );
-  const channelIdentifier = BigInt(
-    bridgeOriginChains[toChain].replace('n', ''),
-  );
+  const channelIdentifier = BigInt(bridgeOriginChains[toChain]);
   if (channelIdentifier === undefined)
     throw new Error(
       `${String(toChain)} is not a valid destination chain from ${String(fromChain)} using ${arbitraryMessagingBridge}`,
