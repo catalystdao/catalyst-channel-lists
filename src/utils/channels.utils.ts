@@ -9,7 +9,7 @@ export function getChannel(
   arbitraryMessagingBridge: ArbitraryMessagingBridge | keyof ChainsStructure,
   fromChain: string,
   toChain: string,
-): BigInt {
+): string {
   const bridgeConfig = chains[
     arbitraryMessagingBridge
   ] as RawChainsStructure[string];
@@ -26,5 +26,5 @@ export function getChannel(
       `${String(toChain)} is not a valid destination chain from ${String(fromChain)} using ${arbitraryMessagingBridge}`,
     );
 
-  return channelIdentifier;
+  return '0x' + channelIdentifier.toString(16).padStart(64, '0');
 }
