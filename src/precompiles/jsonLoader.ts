@@ -4,7 +4,7 @@ import * as path from 'path';
 
 function bigIntReplacer(key: string, value: any): any {
   if (typeof value === 'bigint') {
-    return value.toString();
+    return '0x' + value.toString(16).padStart(64, '0');
   }
   return value;
 }
