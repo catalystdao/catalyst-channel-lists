@@ -1,6 +1,7 @@
 import { ArbitraryMessagingBridge } from '../enums';
 import { ChainsStructure, RawChainsStructure } from '../types';
 import { chains } from '../config/chainsConfig';
+import { chainsName, reverseChainsName } from '../config/chainsName';
 
 /**
  * Returns the channel identifier for a specific paring of AMB, origin chain, and destination chain.
@@ -27,4 +28,22 @@ export function getChannel(
     );
 
   return channelIdentifier;
+}
+
+/**
+ * Given a chainId returns the chain name.
+ */
+export function getChainName(
+  chainName: string | keyof typeof reverseChainsName,
+): string | undefined {
+  return reverseChainsName[chainName];
+}
+
+/**
+ * Given a chain name returns the chain id.
+ */
+export function getChainId(
+  chainId: string | keyof typeof chainsName,
+): string | undefined {
+  return chainsName[chainId];
 }
