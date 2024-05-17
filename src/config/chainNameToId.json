@@ -2,5 +2,6 @@
   "sepolia": "11155111",
   "arbitrumsepolia": "421614",
   "optimismsepolia": "11155420",
-  "basesepolia": "84532"
+  "basesepolia": "84532",
+  "blasttestnet": "23888"
 }
