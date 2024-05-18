@@ -60,7 +60,7 @@ function convertChainsToTypeScript() {
   );
   let chainsConfigContent = fileHeader;
 
-  chainsConfigContent += `export const chains = ${stringifiedChainsConfig};`;
+  chainsConfigContent += `export const chains: Record<string, Record<string, Record<string, string>>> = ${stringifiedChainsConfig};`;
   write('../config/chainsConfig.ts', chainsConfigContent, 'chainsConfig');
 
   // Generate the reverse chain names.
@@ -78,8 +78,8 @@ function convertChainsToTypeScript() {
   );
   let chainsNameContent = fileHeader;
 
-  chainsNameContent += `export const chainsName = ${stringifiedChainsName};\n\n`;
-  chainsNameContent += `export const reverseChainsName = ${stringifiedReverseChainsName};`;
+  chainsNameContent += `export const chainsName: Record<string, string> = ${stringifiedChainsName};\n\n`;
+  chainsNameContent += `export const reverseChainsName: Record<string, string> = ${stringifiedReverseChainsName};`;
   write('../config/chainsName.ts', chainsNameContent, 'chainsName');
 }
 
