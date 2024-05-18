@@ -51,6 +51,21 @@
       "basesepolia": 10004,
       "optimismsepolia": 10005,
       "blasttestnet": 36
+    },
+    "optimism": {
+      "optimism": 24,
+      "base": 30,
+      "blast": 36
+    },
+    "base": {
+      "optimism": 24,
+      "base": 30,
+      "blast": 36
+    },
+    "blast": {
+      "optimism": 24,
+      "base": 30,
+      "blast": 36
     }
   },
   "Polymer": {

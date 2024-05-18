@@ -3,5 +3,8 @@
   "arbitrumsepolia": "421614",
   "optimismsepolia": "11155420",
   "basesepolia": "84532",
-  "blasttestnet": "168587773"
+  "blasttestnet": "168587773",
+  "optimism": "10",
+  "base": "8453",
+  "blast": "81457"
 }

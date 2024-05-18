@@ -7,10 +7,16 @@ export const chainsName = {
   "arbitrumsepolia": "421614",
   "optimismsepolia": "11155420",
   "basesepolia": "84532",
-  "blasttestnet": "168587773"
+  "blasttestnet": "168587773",
+  "optimism": "10",
+  "base": "8453",
+  "blast": "81457"
 };
 
 export const reverseChainsName = {
+  "10": "optimism",
+  "8453": "base",
+  "81457": "blast",
   "84532": "basesepolia",
   "421614": "arbitrumsepolia",
   "11155111": "sepolia",
