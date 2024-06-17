@@ -5,7 +5,7 @@
 export enum ArbitraryMessagingBridge {
   Mock = 'MOCK',
   Wormhole = 'Wormhole',
-  Layerzero = 'Layerzero',
+  Layerzero = 'LayerZero',
   Polymer = 'Polymer',
   Default = 'default',
 }
