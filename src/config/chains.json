@@ -97,25 +97,25 @@
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
-      "seitestnet": 40258
+      "seidevnet": 40258
     },
     "optimismsepolia": {
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
-      "seitestnet": 40258
+      "seidevnet": 40258
     },
     "xaitestnet": {
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
-      "seitestnet": 40258
+      "seidevnet": 40258
     },
-    "seitestnet": {
+    "seidevnet": {
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
-      "seitestnet": 40258
+      "seidevnet": 40258
     }
   },
   "Polymer": {
