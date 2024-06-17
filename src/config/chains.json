@@ -68,6 +68,16 @@
       "blast": 36
     }
   },
+  "Layerzero": {
+    "basesepolia": {
+      "basesepolia": 40245,
+      "optimismsepolia": 40232
+    },
+    "optimismsepolia": {
+      "basesepolia": 40245,
+      "optimismsepolia": 40232
+    }
+  },
   "Polymer": {
     "basesepolia": {
       "optimismsepolia": 44963396551096171397165175003756860590070887575909965553041347743216228630528
