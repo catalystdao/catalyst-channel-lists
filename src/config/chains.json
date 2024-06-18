@@ -70,48 +70,56 @@
   },
   "LayerZero": {
     "optimism": {
+      "arbitrum": 30110,
       "base": 30184,
       "optimism": 30111,
       "sei": 30280,
       "xai": 30236
     },
     "base": {
+      "arbitrum": 30110,
       "base": 30184,
       "optimism": 30111,
       "sei": 30280,
       "xai": 30236
     },
     "sei": {
+      "arbitrum": 30110,
       "base": 30184,
       "optimism": 30111,
       "sei": 30280,
       "xai": 30236
     },
     "xai": {
+      "arbitrum": 30110,
       "base": 30184,
       "optimism": 30111,
       "sei": 30280,
       "xai": 30236
     },
     "basesepolia": {
+      "arbitrumsepolia": 40231,
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
       "seidevnet": 40258
     },
     "optimismsepolia": {
+      "arbitrumsepolia": 40231,
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
       "seidevnet": 40258
     },
     "xaitestnet": {
+      "arbitrumsepolia": 40231,
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
       "seidevnet": 40258
     },
     "seidevnet": {
+      "arbitrumsepolia": 40231,
       "basesepolia": 40245,
       "optimismsepolia": 40232,
       "xaitestnet": 40251,
