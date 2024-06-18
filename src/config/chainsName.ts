@@ -7,6 +7,7 @@ export const chainsName: Record<string, string> = {
   "arbitrumsepolia": "421614",
   "optimismsepolia": "11155420",
   "basesepolia": "84532",
+  "mantlesepolia": "5003",
   "blasttestnet": "168587773",
   "seidevnet": "713715",
   "xaitestnet": "37714555429",
@@ -15,12 +16,15 @@ export const chainsName: Record<string, string> = {
   "base": "8453",
   "blast": "81457",
   "sei": "1329",
-  "xai": "660279"
+  "xai": "660279",
+  "mantle": "5000"
 };
 
 export const reverseChainsName: Record<string, string> = {
   "10": "optimism",
   "1329": "sei",
+  "5000": "mantle",
+  "5003": "mantlesepolia",
   "8453": "base",
   "42161": "arbitrum",
   "81457": "blast",

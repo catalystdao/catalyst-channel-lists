@@ -22,6 +22,7 @@
       "arbitrumsepolia": 10003,
       "basesepolia": 10004,
       "optimismsepolia": 10005,
+      "mantlesepolia": 35,
       "blasttestnet": 36
     },
     "arbitrumsepolia": {
@@ -29,6 +30,7 @@
       "arbitrumsepolia": 10003,
       "basesepolia": 10004,
       "optimismsepolia": 10005,
+      "mantlesepolia": 35,
       "blasttestnet": 36
     },
     "basesepolia": {
@@ -36,6 +38,7 @@
       "arbitrumsepolia": 10003,
       "basesepolia": 10004,
       "optimismsepolia": 10005,
+      "mantlesepolia": 35,
       "blasttestnet": 36
     },
     "optimismsepolia": {
@@ -43,6 +46,15 @@
       "arbitrumsepolia": 10003,
       "basesepolia": 10004,
       "optimismsepolia": 10005,
+      "mantlesepolia": 35,
+      "blasttestnet": 36
+    },
+    "mantlesepolia": {
+      "sepolia": 10002,
+      "arbitrumsepolia": 10003,
+      "basesepolia": 10004,
+      "optimismsepolia": 10005,
+      "mantlesepolia": 35,
       "blasttestnet": 36
     },
     "blasttestnet": {
@@ -50,21 +62,31 @@
       "arbitrumsepolia": 10003,
       "basesepolia": 10004,
       "optimismsepolia": 10005,
+      "mantlesepolia": 35,
       "blasttestnet": 36
     },
     "optimism": {
       "optimism": 24,
       "base": 30,
+      "mantle": 35,
       "blast": 36
     },
     "base": {
       "optimism": 24,
       "base": 30,
+      "mantle": 35,
       "blast": 36
     },
     "blast": {
       "optimism": 24,
       "base": 30,
+      "mantle": 35,
+      "blast": 36
+    },
+    "mantle": {
+      "optimism": 24,
+      "base": 30,
+      "mantle": 35,
       "blast": 36
     }
   },

@@ -3,6 +3,7 @@
   "arbitrumsepolia": "421614",
   "optimismsepolia": "11155420",
   "basesepolia": "84532",
+  "mantlesepolia": "5003",
   "blasttestnet": "168587773",
   "seidevnet": "713715",
   "xaitestnet": "37714555429",
@@ -11,5 +12,6 @@
   "base": "8453",
   "blast": "81457",
   "sei": "1329",
-  "xai": "660279"
+  "xai": "660279",
+  "mantle": "5000"
 }
