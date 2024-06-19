@@ -133,6 +133,13 @@
       "xaitestnet": 40251,
       "seidevnet": 40258
     },
+    "arbitrumsepolia": {
+      "arbitrumsepolia": 40231,
+      "basesepolia": 40245,
+      "optimismsepolia": 40232,
+      "xaitestnet": 40251,
+      "seidevnet": 40258
+    },
     "xaitestnet": {
       "arbitrumsepolia": 40231,
       "basesepolia": 40245,
