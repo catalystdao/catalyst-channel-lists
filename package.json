@@ -1,6 +1,6 @@
 {
   "name": "@catalabs/catalyst-channel-lists",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "Catalyst AMM channel list utilities and definitions",
   "keywords": [
     "amm",

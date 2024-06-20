@@ -67,24 +67,35 @@
     },
     "optimism": {
       "optimism": 24,
+      "arbitrum": 23,
       "base": 30,
       "mantle": 35,
       "blast": 36
     },
     "base": {
       "optimism": 24,
+      "arbitrum": 23,
       "base": 30,
       "mantle": 35,
       "blast": 36
     },
     "blast": {
       "optimism": 24,
+      "arbitrum": 23,
       "base": 30,
       "mantle": 35,
       "blast": 36
     },
     "mantle": {
       "optimism": 24,
+      "arbitrum": 23,
+      "base": 30,
+      "mantle": 35,
+      "blast": 36
+    },
+    "arbitrum": {
+      "optimism": 24,
+      "arbitrum": 23,
       "base": 30,
       "mantle": 35,
       "blast": 36
