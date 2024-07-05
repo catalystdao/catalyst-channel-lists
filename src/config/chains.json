@@ -130,6 +130,13 @@
       "sei": 30280,
       "xai": 30236
     },
+    "arbitrum": {
+      "arbitrum": 30110,
+      "base": 30184,
+      "optimism": 30111,
+      "sei": 30280,
+      "xai": 30236
+    },
     "basesepolia": {
       "arbitrumsepolia": 40231,
       "basesepolia": 40245,
