@@ -37,11 +37,15 @@ function convertChainsToTypeScript() {
       const reconstructedFromChain: (typeof reconstructedBridge)[string] = {};
       for (const toChain of Object.keys(selectedFromChain)) {
         const translatedToChain = parsedRemappings[toChain];
-        if (translatedToChain === undefined) throw new Error(`${toChain} not found in remappings`);
+        if (translatedToChain === undefined) {
+          throw new Error(`${toChain} not found in remappings`);
+        }
         reconstructedFromChain[translatedToChain] = selectedFromChain[toChain];
       }
       const translatedFromChain = parsedRemappings[fromChain];
-      if (translatedFromChain === undefined) throw new Error(`${fromChain} not found in remappings`);
+      if (translatedFromChain === undefined) {
+        throw new Error(`${fromChain} not found in remappings`);
+      }
       reconstructedBridge[translatedFromChain] = reconstructedFromChain;
     }
     reconstructedJson[bridge] = reconstructedBridge;
