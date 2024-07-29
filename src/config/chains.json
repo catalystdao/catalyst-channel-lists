@@ -23,7 +23,17 @@
       "basesepolia": 10004,
       "optimismsepolia": 10005,
       "mantlesepolia": 35,
-      "blasttestnet": 36
+      "blasttestnet": 36,
+      "scrollsepolia": 34
+    },
+    "scrollsepolia": {
+      "sepolia": 10002,
+      "arbitrumsepolia": 10003,
+      "basesepolia": 10004,
+      "optimismsepolia": 10005,
+      "mantlesepolia": 35,
+      "blasttestnet": 36,
+      "scrollsepolia": 34
     },
     "arbitrumsepolia": {
       "sepolia": 10002,
@@ -31,7 +41,8 @@
       "basesepolia": 10004,
       "optimismsepolia": 10005,
       "mantlesepolia": 35,
-      "blasttestnet": 36
+      "blasttestnet": 36,
+      "scrollsepolia": 34
     },
     "basesepolia": {
       "sepolia": 10002,
@@ -39,7 +50,8 @@
       "basesepolia": 10004,
       "optimismsepolia": 10005,
       "mantlesepolia": 35,
-      "blasttestnet": 36
+      "blasttestnet": 36,
+      "scrollsepolia": 34
     },
     "optimismsepolia": {
       "sepolia": 10002,
@@ -47,7 +59,8 @@
       "basesepolia": 10004,
       "optimismsepolia": 10005,
       "mantlesepolia": 35,
-      "blasttestnet": 36
+      "blasttestnet": 36,
+      "scrollsepolia": 34
     },
     "mantlesepolia": {
       "sepolia": 10002,
@@ -55,7 +68,8 @@
       "basesepolia": 10004,
       "optimismsepolia": 10005,
       "mantlesepolia": 35,
-      "blasttestnet": 36
+      "blasttestnet": 36,
+      "scrollsepolia": 34
     },
     "blasttestnet": {
       "sepolia": 10002,
@@ -63,42 +77,56 @@
       "basesepolia": 10004,
       "optimismsepolia": 10005,
       "mantlesepolia": 35,
-      "blasttestnet": 36
+      "blasttestnet": 36,
+      "scrollsepolia": 34
     },
     "optimism": {
       "optimism": 24,
       "arbitrum": 23,
       "base": 30,
       "mantle": 35,
-      "blast": 36
+      "blast": 36,
+      "scroll": 34
     },
     "base": {
       "optimism": 24,
       "arbitrum": 23,
       "base": 30,
       "mantle": 35,
-      "blast": 36
+      "blast": 36,
+      "scroll": 34
     },
     "blast": {
       "optimism": 24,
       "arbitrum": 23,
       "base": 30,
       "mantle": 35,
-      "blast": 36
+      "blast": 36,
+      "scroll": 34
     },
     "mantle": {
       "optimism": 24,
       "arbitrum": 23,
       "base": 30,
       "mantle": 35,
-      "blast": 36
+      "blast": 36,
+      "scroll": 34
     },
     "arbitrum": {
       "optimism": 24,
       "arbitrum": 23,
       "base": 30,
       "mantle": 35,
-      "blast": 36
+      "blast": 36,
+      "scroll": 34
+    },
+    "scroll": {
+      "optimism": 24,
+      "arbitrum": 23,
+      "base": 30,
+      "mantle": 35,
+      "blast": 36,
+      "scroll": 34
     }
   },
   "LayerZero": {

@@ -5,6 +5,7 @@
   "basesepolia": "84532",
   "mantlesepolia": "5003",
   "blasttestnet": "168587773",
+  "scrollsepolia": "534351",
   "seidevnet": "713715",
   "xaitestnet": "37714555429",
   "arbitrum": "42161",
@@ -13,5 +14,6 @@
   "blast": "81457",
   "sei": "1329",
   "xai": "660279",
-  "mantle": "5000"
+  "mantle": "5000",
+  "scroll": "534352"
 }
