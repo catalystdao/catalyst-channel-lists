@@ -1,32 +1,75 @@
 import { ArbitraryMessagingBridge } from '../enums';
-import { ChainsStructure, RawChainsStructure } from '../types';
 import { chains } from '../config/chainsConfig';
 import { chainsName, reverseChainsName } from '../config/chainsName';
 
 /**
- * Returns the channel identifier for a specific paring of AMB, origin chain, and destination chain.
+ * Returns the channel identifier for a specific paring of AMB, origin chain, and destination chain or null if it does not exist.
  */
 export function getChannel(
-  arbitraryMessagingBridge: ArbitraryMessagingBridge | keyof ChainsStructure,
+  arbitraryMessagingBridge: ArbitraryMessagingBridge,
   fromChain: string,
   toChain: string,
+): bigint | null {
+  const channelIdentifier = getChannelIdentifier(arbitraryMessagingBridge, fromChain, toChain);
+  if (channelIdentifier === null) {
+    return channelIdentifier;
+  }
+  return BigInt(channelIdentifier);
+}
+
+/**
+ * Returns the channel identifier for a specific paring of AMB, origin chain, and destination chain.
+ */
+export function getChannelOrThrowj(
+arbitraryMessagingBridge: ArbitraryMessagingBridge,
+fromChain: string,
+toChain: string,
 ): bigint {
+  const channel = getChannel(arbitraryMessagingBridge, fromChain, toChain);
+  if (channel === null) {
+    throw new Error(`Unable to find channel for ${arbitraryMessagingBridge} between chains ${fromChain} and ${toChain}!`);
+  }
+  return channel;
+}
+
+/**
+ * Returns the channel string identifier for a specific paring of AMB, origin chain, and destination chain or null if it does not exist.
+ */
+export function getChannelIdentifier(
+  arbitraryMessagingBridge: ArbitraryMessagingBridge,
+  fromChain: string,
+  toChain: string,
+): string | null {
   const bridgeConfig = chains[
     arbitraryMessagingBridge
-  ] as RawChainsStructure[string];
-  if (bridgeConfig === undefined)
-    throw new Error(`${String(arbitraryMessagingBridge)} is not found`);
+  ];
+  if (bridgeConfig === undefined) {
+    return null;
+  }
   const bridgeOriginChains = bridgeConfig[fromChain];
-  if (bridgeOriginChains === undefined)
-    throw new Error(
-      `${String(fromChain)} is not a supported origin chain for ${String(arbitraryMessagingBridge)}`,
-    );
-  const channelIdentifier = BigInt(bridgeOriginChains[toChain]);
-  if (channelIdentifier === undefined)
-    throw new Error(
-      `${String(toChain)} is not a valid destination chain from ${String(fromChain)} using ${arbitraryMessagingBridge}`,
-    );
+  if (bridgeOriginChains === undefined) {
+    return null;
+  }
+  const channelIdentifier = bridgeOriginChains[toChain];
+  if (channelIdentifier === undefined) {
+    return null;
+  }
 
+  return channelIdentifier;
+}
+
+/**
+ * Returns the channel string identifier for a specific paring of AMB, origin chain, and destination chain.
+ */
+export function getChannelIdentifierOrThrow(
+  arbitraryMessagingBridge: ArbitraryMessagingBridge,
+  fromChain: string,
+  toChain: string,
+): string {
+  const channelIdentifier = getChannelIdentifier(arbitraryMessagingBridge, fromChain, toChain);
+  if (channelIdentifier === null) {
+    throw new Error(`Unable to find channel identifier for ${arbitraryMessagingBridge} between chains ${fromChain} and ${toChain}!`);
+  }
   return channelIdentifier;
 }
 
