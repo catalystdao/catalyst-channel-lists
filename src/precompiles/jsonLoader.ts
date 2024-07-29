@@ -18,10 +18,7 @@ function customNumberParser(value: string) {
 const configRelativePath = path.join(__dirname, '../config');
 
 const jsonData = fs.readFileSync(`${configRelativePath}/chains.json`, 'utf8');
-const remappings = fs.readFileSync(
-  `${configRelativePath}/chainNameToId.json`,
-  'utf8',
-);
+const remappings = fs.readFileSync(`${configRelativePath}/chainNameToId.json`, 'utf8');
 
 // remap all chain names to ids.
 const parsedJson = parse(jsonData, null, customNumberParser) as {
@@ -40,24 +37,18 @@ function convertChainsToTypeScript() {
       const reconstructedFromChain: (typeof reconstructedBridge)[string] = {};
       for (const toChain of Object.keys(selectedFromChain)) {
         const translatedToChain = parsedRemappings[toChain];
-        if (translatedToChain === undefined)
-          throw new Error(`${toChain} not found in remappings`);
+        if (translatedToChain === undefined) throw new Error(`${toChain} not found in remappings`);
         reconstructedFromChain[translatedToChain] = selectedFromChain[toChain];
       }
       const translatedFromChain = parsedRemappings[fromChain];
-      if (translatedFromChain === undefined)
-        throw new Error(`${fromChain} not found in remappings`);
+      if (translatedFromChain === undefined) throw new Error(`${fromChain} not found in remappings`);
       reconstructedBridge[translatedFromChain] = reconstructedFromChain;
     }
     reconstructedJson[bridge] = reconstructedBridge;
   }
 
   // Write chainsConfig.ts
-  const stringifiedChainsConfig = JSON.stringify(
-    reconstructedJson,
-    bigIntReplacer,
-    2,
-  );
+  const stringifiedChainsConfig = JSON.stringify(reconstructedJson, bigIntReplacer, 2);
   let chainsConfigContent = fileHeader;
 
   chainsConfigContent += `export const chains: Record<string, Record<string, Record<string, string>>> = ${stringifiedChainsConfig};`;
@@ -71,11 +62,7 @@ function convertChainsToTypeScript() {
 
   // Write chainsName.ts
   const stringifiedChainsName = JSON.stringify(parsedRemappings, null, 2);
-  const stringifiedReverseChainsName = JSON.stringify(
-    reversedParsedRemappings,
-    bigIntReplacer,
-    2,
-  );
+  const stringifiedReverseChainsName = JSON.stringify(reversedParsedRemappings, bigIntReplacer, 2);
   let chainsNameContent = fileHeader;
 
   chainsNameContent += `export const chainsName: Record<string, string> = ${stringifiedChainsName};\n\n`;

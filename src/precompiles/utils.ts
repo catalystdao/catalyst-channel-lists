@@ -12,11 +12,7 @@ export function capatalise(val: string): string {
   return caped;
 }
 
-export function write(
-  localPath: string,
-  val: string,
-  description: string = '',
-) {
+export function write(localPath: string, val: string, description: string = '') {
   fs.writeFile(path.join(__dirname, localPath), val, (err) => {
     if (err) {
       console.error(`Error writing ${description} to file: ${err} `);

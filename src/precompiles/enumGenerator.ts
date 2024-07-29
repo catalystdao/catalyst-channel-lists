@@ -1,10 +1,7 @@
 import * as chains from '../config/chains.json';
 import { fileHeader, generateEnum, write } from './utils';
 
-export function generateEnumsFromJson(
-  name: string,
-  enumKeys: string[],
-): string {
+export function generateEnumsFromJson(name: string, enumKeys: string[]): string {
   let enumContent = fileHeader;
 
   // Generate AMB enums:
@@ -14,10 +11,7 @@ export function generateEnumsFromJson(
 }
 
 // Generate enums from imported JSON data
-const ambEnums = generateEnumsFromJson(
-  'ArbitraryMessagingBridge',
-  Object.keys(chains),
-);
+const ambEnums = generateEnumsFromJson('ArbitraryMessagingBridge', Object.keys(chains));
 
 // Write enums to TypeScript file
 write('../enums/AMBs.enums.ts', ambEnums, 'AMB enums');

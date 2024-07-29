@@ -10,11 +10,7 @@ export function getChannel(
   fromChain: string,
   toChain: string,
 ): bigint | null {
-  const channelIdentifier = getChannelIdentifier(
-    arbitraryMessagingBridge,
-    fromChain,
-    toChain,
-  );
+  const channelIdentifier = getChannelIdentifier(arbitraryMessagingBridge, fromChain, toChain);
   if (channelIdentifier === null) {
     return channelIdentifier;
   }
@@ -70,11 +66,7 @@ export function getChannelIdentifierOrThrow(
   fromChain: string,
   toChain: string,
 ): string {
-  const channelIdentifier = getChannelIdentifier(
-    arbitraryMessagingBridge,
-    fromChain,
-    toChain,
-  );
+  const channelIdentifier = getChannelIdentifier(arbitraryMessagingBridge, fromChain, toChain);
   if (channelIdentifier === null) {
     throw new Error(
       `Unable to find channel identifier for ${arbitraryMessagingBridge} between chains ${fromChain} and ${toChain}!`,
@@ -86,17 +78,13 @@ export function getChannelIdentifierOrThrow(
 /**
  * Given a chainId returns the chain name.
  */
-export function getChainName(
-  chainName: string | keyof typeof reverseChainsName,
-): string | undefined {
+export function getChainName(chainName: string | keyof typeof reverseChainsName): string | undefined {
   return reverseChainsName[chainName];
 }
 
 /**
  * Given a chain name returns the chain id.
  */
-export function getChainId(
-  chainId: string | keyof typeof chainsName,
-): string | undefined {
+export function getChainId(chainId: string | keyof typeof chainsName): string | undefined {
   return chainsName[chainId];
 }
