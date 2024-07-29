@@ -14,6 +14,9 @@ devDependencies:
   lossless-json:
     specifier: ^4.0.1
     version: 4.0.1
+  prettier:
+    specifier: ^3.3.2
+    version: 3.3.2
   ts-node:
     specifier: ^10.9.2
     version: 10.9.2(@types/node@20.11.20)(typescript@5.3.3)
@@ -300,6 +303,12 @@ packages:
     dependencies:
       find-up: 2.1.0
       load-json-file: 4.0.0
+    dev: true
+
+  /prettier@3.3.2:
+    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /require-directory@2.1.1:

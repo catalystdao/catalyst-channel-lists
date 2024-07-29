@@ -28,7 +28,7 @@
     "barrels": "barrelsby --config barrelsby.config.json",
     "build": "ts-node --project tsconfig.json src/precompiles/index.ts && tsc -b",
     "clean": "rm -rf ./build",
-    "format": "prettier -w src/*.ts",
+    "format": "prettier -w src/*/*.ts",
     "lint": "eslint . --fix"
   },
   "devDependencies": {

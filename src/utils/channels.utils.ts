@@ -10,7 +10,11 @@ export function getChannel(
   fromChain: string,
   toChain: string,
 ): bigint | null {
-  const channelIdentifier = getChannelIdentifier(arbitraryMessagingBridge, fromChain, toChain);
+  const channelIdentifier = getChannelIdentifier(
+    arbitraryMessagingBridge,
+    fromChain,
+    toChain,
+  );
   if (channelIdentifier === null) {
     return channelIdentifier;
   }
@@ -21,13 +25,15 @@ export function getChannel(
  * Returns the channel identifier for a specific paring of AMB, origin chain, and destination chain.
  */
 export function getChannelOrThrowj(
-arbitraryMessagingBridge: ArbitraryMessagingBridge,
-fromChain: string,
-toChain: string,
+  arbitraryMessagingBridge: ArbitraryMessagingBridge,
+  fromChain: string,
+  toChain: string,
 ): bigint {
   const channel = getChannel(arbitraryMessagingBridge, fromChain, toChain);
   if (channel === null) {
-    throw new Error(`Unable to find channel for ${arbitraryMessagingBridge} between chains ${fromChain} and ${toChain}!`);
+    throw new Error(
+      `Unable to find channel for ${arbitraryMessagingBridge} between chains ${fromChain} and ${toChain}!`,
+    );
   }
   return channel;
 }
@@ -40,9 +46,7 @@ export function getChannelIdentifier(
   fromChain: string,
   toChain: string,
 ): string | null {
-  const bridgeConfig = chains[
-    arbitraryMessagingBridge
-  ];
+  const bridgeConfig = chains[arbitraryMessagingBridge];
   if (bridgeConfig === undefined) {
     return null;
   }
@@ -66,9 +70,15 @@ export function getChannelIdentifierOrThrow(
   fromChain: string,
   toChain: string,
 ): string {
-  const channelIdentifier = getChannelIdentifier(arbitraryMessagingBridge, fromChain, toChain);
+  const channelIdentifier = getChannelIdentifier(
+    arbitraryMessagingBridge,
+    fromChain,
+    toChain,
+  );
   if (channelIdentifier === null) {
-    throw new Error(`Unable to find channel identifier for ${arbitraryMessagingBridge} between chains ${fromChain} and ${toChain}!`);
+    throw new Error(
+      `Unable to find channel identifier for ${arbitraryMessagingBridge} between chains ${fromChain} and ${toChain}!`,
+    );
   }
   return channelIdentifier;
 }
