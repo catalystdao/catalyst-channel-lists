@@ -3,3 +3,4 @@
  */
 
 export * from './chainsConfig';
+export * from './chainsName';

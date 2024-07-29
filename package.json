@@ -1,6 +1,6 @@
 {
   "name": "@catalabs/catalyst-channel-lists",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "Catalyst AMM channel list utilities and definitions",
   "keywords": [
     "amm",
@@ -28,13 +28,14 @@
     "barrels": "barrelsby --config barrelsby.config.json",
     "build": "ts-node --project tsconfig.json src/precompiles/index.ts && tsc -b",
     "clean": "rm -rf ./build",
-    "format": "prettier -w src/*.ts",
+    "format": "prettier -w src/*/*.ts",
     "lint": "eslint . --fix"
   },
   "devDependencies": {
     "@types/node": "^20.11.20",
     "barrelsby": "^2.8.1",
     "lossless-json": "^4.0.1",
+    "prettier": "^3.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
